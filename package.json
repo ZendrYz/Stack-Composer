@@ -1,0 +1,65 @@
+{
+  "name": "stack-composer",
+  "version": "1.0.4",
+  "description": "Scaffold modern web projects fast via npx — interactive, flag-based, or AI-agent friendly.",
+  "type": "module",
+  "repository": "https://github.com/ZendrYz/Stack-Composer",
+  "bin": {
+    "stack-composer": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --dts --clean --target esnext --minify",
+    "dev": "tsup src/cli.ts --format esm --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "lint": "eslint src/ tests/",
+    "prepare": "husky",
+    "prepublishOnly": "npm run build",
+    "test:interactive": "node dist/cli.js create",
+    "test:flags": "node dist/cli.js create next-full test-app --git --yes",
+    "test:json": "node dist/cli.js create next-full test-app --json --yes"
+  },
+  "keywords": [
+    "cli",
+    "scaffold",
+    "nextjs",
+    "astro",
+    "vite",
+    "tanstack",
+    "tailwind",
+    "typescript",
+    "developer-tools"
+  ],
+  "author": "ZendrYz",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "figlet": "^1.8.0",
+    "inquirer": "^12.6.0",
+    "ora": "^8.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/figlet": "^1.7.0",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.58.2",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.58.2",
+    "vitest": "^4.1.4"
+  }
+}
