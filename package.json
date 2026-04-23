@@ -1,6 +1,6 @@
 {
   "name": "stack-composer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Scaffold modern web projects fast via npx — interactive, flag-based, or AI-agent friendly.",
   "type": "module",
   "repository": "https://github.com/ZendrYz/Stack-Composer",
